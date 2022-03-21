@@ -6,13 +6,13 @@
 
 
 .filter-container {
-	margin-top: 10rem;
+	margin-top: 3rem;
 	margin-bottom: 10rem;
 	margin-left: 2rem;
 	background-color: var(--bg-color-1);
 	padding: 1rem;
 	border-radius: .5rem;
-	max-height: 74rem;
+	max-height: 60rem;
 }
 
 .filter-heading,
