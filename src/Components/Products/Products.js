@@ -1,110 +1,93 @@
-import { useState, useEffect } from 'react'
+// import { useState, useEffect } from 'react'
 import ProductCard from './ProductCard'
 import axios from 'axios';
 import "./products.css";
+import { useFilter } from '../../context/context';
+import FilterContainer from './FilterContainer';
+import { products } from "../../backend/db/products"
 
-
-const url = "/api/products";
 const Products = () => {
-	const [products, setProducts] = useState([]);
+	const { filterState, filterDispatch } = useFilter();
+	// const [products, setProducts] = useState([]);
+	// const products = productsInList;
+	// useEffect(() => {
+	// 	(axios.get("/api/products").then(res => {
+	// 		setProducts(res.data.products);
+	// 		console.log("response:", res.data.products)
+	// 	}))();
+	// }, [])
 
-	useEffect(() => {
-		axios.get(url).then(res => {
-			setProducts(res.data.products);
-			console.log("response:", res.data.products)
-		})
-	}, [])
+	const updatedProducts = () => {
+		let updatedProductList = products;
 
+		if (filterState.excludeNotAvailable) {
+			updatedProductList = updatedProductList.filter((item) => item.availableOrNot)
+			console.log(updatedProductList)
+		}
 
+		if (filterState.offerItems) {
+			updatedProductList = updatedProductList.filter((item) => item.offer)
+			console.log(updatedProductList)
+		}
+
+		if (filterState.byCategory) {
+			if (filterState.byCategory === 'All') {
+				updatedProductList = products
+			} else {
+				updatedProductList = updatedProductList.filter((item) => item.categoryName === filterState.byCategory)
+				console.log(updatedProductList)
+			}
+		}
+
+		if (filterState.byPrice) {
+			if (filterState.byPrice === 'All') {
+				updatedProductList = products
+			} else if (filterState.byPrice === "Above 50 Below 100") {
+				updatedProductList = updatedProductList.filter((item) => item.priceNew >= 50 && item.priceNew < 100)
+			} else if (filterState.byPrice === "Above 100 Below 200") {
+				updatedProductList = updatedProductList.filter((item) => item.priceNew >= 100 && item.priceNew < 200)
+			} else if (filterState.byPrice === "Above 200 Below 300") {
+				updatedProductList = updatedProductList.filter((item) => item.priceNew >= 200 && item.priceNew < 300)
+			}
+		}
+
+		if (filterState.sortByRange) {
+			updatedProductList = filterState.sortByRange === 0
+				? updatedProductList
+				: [...updatedProductList].filter((product) => product.priceNew <= filterState.sortByRange);
+			console.log(updatedProductList)
+		}
+
+		if (filterState.isSort) {
+			updatedProductList = updatedProductList.sort((a, b) =>
+				filterState.isSort === 'lowToHigh' ? a.priceNew - b.priceNew : b.priceNew - a.priceNew
+			)
+			// console.log(updatedProductList)
+		}
+		if (filterState.byRating) {
+			if (filterState.byRating === '4StarAndAbove') {
+				updatedProductList = updatedProductList.filter((item) => item.rating >= 4)
+			} else if (filterState.byRating === '3StarAndAbove') {
+				updatedProductList = updatedProductList.filter((item) => item.rating >= 3)
+			} else if (filterState.byRating === '2StarAndAbove') {
+				updatedProductList = updatedProductList.filter((item) => item.rating >= 2)
+			} else {
+				updatedProductList = updatedProductList.filter((item) => item.rating >= 1)
+			}
+		}
+		return updatedProductList;
+	}
 
 	return (
-		<div>
-
+		< div >
 			<div className="main-container">
-				<div className="filter-container">
-					<h1 className="filter-heading">filter-Products</h1>
-
-					<span className="filter-sub-heading">
-						<label style={{ fontSize: " 1.8rem" }}>Price: </label>
-						<select >
-							<option value="All">All</option>
-							<option value="Above 50 Below 100">Above 50 Below 100</option>
-							<option value="Above 100 Below 200">Above 100 Below 200</option>
-							<option value="Above 200 Below 300">Above 200 Below 300</option>
-						</select>
-					</span>
-
-					<span className="filter-sub-heading">
-						<label>
-							<input type="radio" name="group1" /> <span>Low to high</span>
-						</label>
-						<br />
-						<label>
-							<input type="radio" name="group1" /> <span>High to low</span>
-						</label>
-					</span>
-
-					<span className="filter-sub-heading">
-						<label>
-							<input type="checkbox" name="group1" />
-							<span>Exclude Not Available</span>
-						</label>
-						<br />
-						<label>
-							<input type="checkbox" name="group1" /> <span>Item With Offers Only</span>
-						</label>
-					</span>
-
-					<span className="filter-sub-heading">
-						<label style={{ fontSize: " 1.8rem" }}>Category: </label>
-						<select >
-							<option value="All">All</option>
-							<option value="Above 50 Below 100">Above 50 Below 100</option>
-							<option value="Above 100 Below 200">Above 100 Below 200</option>
-							<option value="Above 200 Below 300">Above 200 Below 300</option>
-						</select>
-					</span>
-
-					<span className="filter-sub-heading">
-						<p>
-
-							<label style={{ fontSize: " 1.8rem", marginLeft: '2rem', marginTop: '-2.3rem' }}>Ratings :</label>
-						</p>
-						<span>
-							<label>
-								<input type="radio" name="group2" />
-								<p style={{ marginLeft: '2rem', marginTop: '-2.3rem' }} >4 Star and Above</p>
-							</label>
-						</span>
-						<span>
-							<label>
-								<input type="radio" name="group2" />
-								<p style={{ marginLeft: '2rem', marginTop: '-2.3rem' }}>3 Star and Above</p>
-							</label>
-						</span>
-						<span>
-							<label>
-								<input type="radio" name="group2" />
-								<p style={{ marginLeft: '2rem', marginTop: '-2.3rem' }}>2 Star and Above</p>
-							</label>
-						</span>
-						<span>
-							<label>
-								<input type="radio" name="group2" />
-								<p style={{ marginLeft: '2rem', marginTop: '-2.3rem' }}>1 Star and Above</p>
-							</label>
-						</span>
-					</span>
-
-
-				</div>
+				<FilterContainer />
 				<div>
 					<section className="cards" id="cards">
-
-
+						{updatedProducts().length}
 						<div className="box-container">
 							{
-								products.map((item) => {
+								updatedProducts().map((item) => {
 									return (
 										<div key={item._id}>
 											<ProductCard item={item} />
@@ -112,14 +95,10 @@ const Products = () => {
 									)
 								})
 							}
-
-
-
-
 						</div>
 					</section>
 				</div>
-			</div >
+			</div>
 		</div >
 	)
 }
