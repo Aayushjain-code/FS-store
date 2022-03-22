@@ -84,7 +84,7 @@ const Products = () => {
 				<FilterContainer />
 				<div>
 					<section className="cards" id="cards">
-						{updatedProducts().length}
+						{/* {updatedProducts().length} */}
 						<div className="box-container">
 							{
 								updatedProducts().map((item) => {

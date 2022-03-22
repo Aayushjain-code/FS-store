@@ -63,7 +63,7 @@ const FilterContainer = () => {
 					min={60}
 					max={300}
 					step={30}
-					defaultValue={100}
+					defaultValue={250}
 					onChange={(event) =>
 						filterDispatch({ type: "FILTER_BY_RANGE", payload: event.target.value })
 					}
