@@ -5,15 +5,17 @@ import App from "./App";
 import { makeServer } from "./server";
 
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "./context/context";
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-
-      <App />
-    </BrowserRouter>
+    <Provider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById("root")
 );
