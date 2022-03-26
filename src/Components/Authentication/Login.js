@@ -1,22 +1,64 @@
-import React from 'react'
-import './authentication.css'
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useAuth } from '../../context/authContext';
+import './authentication.css';
+
+
+
 
 const Login = () => {
+	const { login, testLogin } = useAuth();
+
+	const [userDetails, setUserDetails] = useState({ email: '', password: '' })
+	const [error, setError] = useState({ isError: false, text: '' });
+	const [toggleShowPassword, setToggleShowPassword] = useState(true)
+
+
+	useEffect(() => {
+		const timeOutId = setTimeout(() => {
+			setError({ isError: false, text: '' })
+		}, 3000)
+		return () => clearTimeout(timeOutId)
+	}, [error])
+
+
+
+
+	const loginHandler = (e) => {
+		e.preventDefault();
+		console.log('hello')
+		if (!userDetails.email || !userDetails.password) {
+			setError({ isError: true, text: 'Please enter all the fields' })
+		}
+		else if (!userDetails.email.includes('@')) {
+			setError({ isError: true, text: 'Invalid Email-Id' })
+		} else {
+			login(userDetails)
+			setUserDetails({ email: '', password: '' })
+		}
+	}
+
+
 	return (
 		<div><div className="wrapper login-wrapper">
 			<h2>Login</h2>
-			<form action="#">
+			<form >
 				<div className="input-box">
-					<input type="text" placeholder="Enter your email" required></input>
+					<input type="text" placeholder="Enter your email" value={userDetails.email} onChange={(e) => setUserDetails({ ...userDetails, email: e.target.value })}></input>
 				</div>
 				<div className="input-box">
-					<input type="password" placeholder="Create password" required></input>
+					{toggleShowPassword ? <i class="fas fa-eye icon" onClick={() => setToggleShowPassword(!toggleShowPassword)}></i> : <i class="fas fa-eye-slash icon" onClick={() => setToggleShowPassword(!toggleShowPassword)}></i>}
+
+					<input type={toggleShowPassword ? "password" : 'text'} placeholder="Create password" value={userDetails.password} onChange={(e) => setUserDetails({ ...userDetails, password: e.target.value })}></input>
 				</div>
-				<div className="button">
+				<div className="button" onClick={(e) => loginHandler(e)}>
 					Login Now
 				</div>
+				<div className="button" onClick={() => testLogin()}>
+					Test Login
+				</div>
 				<div className="m1 btn btn-link">
-					<h3>Not having an account? <a href="">Signup now</a></h3>
+					<h3>Not having an account? <Link to="/signup">  Signup now </Link> </h3>
 				</div>
 			</form>
 		</div>

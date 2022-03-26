@@ -88,3 +88,21 @@ form .text h3 a {
 form .text h3 a:hover {
 	text-decoration: underline;
 }
+
+
+
+
+
+.input-icons {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.icon {
+	position: absolute;
+	    z-index: 10;
+	    margin-top: 16px;
+	min-width: 40px;
+	margin-left: 31rem;
+}
+
