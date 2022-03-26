@@ -13,6 +13,8 @@ import Products from "./Components/Products/Products";
 import Login from "./Components/Authentication/Login";
 import Signup from "./Components/Authentication/Signup";
 
+import RistrictAuth from "./Components/Authentication/ReqResAuth/RestrictAuth";
+
 function App() {
   return (
     <div>
@@ -23,8 +25,12 @@ function App() {
         <Route path="/products" element={<Products />} />
         <Route path="/mockman" element={<Mockman />} />
 
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
+        <Route element={<RistrictAuth />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+        </Route>
+
       </Routes>
       <Footer />
     </div>
