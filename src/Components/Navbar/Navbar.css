@@ -1,7 +1,12 @@
 /* @import url("https://freshstyleui.netlify.app/styles.css"); */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
 
-
+.msgStyle1{
+   font-weight:600;
+	position: absolute;
+	top: 8rem;
+	right: 14.5rem;
+}
 .header {
 	position: fixed;
 	top: 0;

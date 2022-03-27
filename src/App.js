@@ -9,6 +9,12 @@ import Home from "./Components/Home/Home";
 import Cart from "./Components/Cart/Cart";
 import Products from "./Components/Products/Products";
 
+
+import Login from "./Components/Authentication/Login";
+import Signup from "./Components/Authentication/Signup";
+
+import RistrictAuth from "./Components/Authentication/ReqResAuth/RestrictAuth";
+
 function App() {
   return (
     <div>
@@ -18,6 +24,13 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<Products />} />
         <Route path="/mockman" element={<Mockman />} />
+
+        <Route element={<RistrictAuth />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+
+        </Route>
+
       </Routes>
       <Footer />
     </div>
