@@ -1,5 +1,5 @@
 import { useLocation, Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../../Context";
+import { useAuth } from "../../../context/authContext";
 
 export const RequireAuth = () => {
 	const { authState: { userId } } = useAuth();
