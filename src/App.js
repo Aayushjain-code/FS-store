@@ -7,6 +7,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./Components/Home/Home";
 import Cart from "./Components/Cart/Cart";
+import Wishlist from "./Components/Wishlist/Wishlist";
 import Products from "./Components/Products/Products";
 
 
@@ -22,6 +23,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/cart" element={<Cart />} />
+        <Route path="/wishlist" element={<Wishlist />} />
+
         <Route path="/products" element={<Products />} />
         <Route path="/mockman" element={<Mockman />} />
 
