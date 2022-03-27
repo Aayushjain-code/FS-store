@@ -1,21 +1,19 @@
-// import { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import ProductCard from './ProductCard'
 import axios from 'axios';
 import "./products.css";
 import { useFilter } from '../../context/context';
 import FilterContainer from './FilterContainer';
-import { products } from "../../backend/db/products"
+// import { products } from "../../backend/db/products"
 import { FilterFunction } from './updatedProducts';
 
 const Products = () => {
 	const { filterState, filterDispatch } = useFilter();
-	// const [products, setProducts] = useState([]);
-	// const products = productsInList;
-	// useEffect(() => {
-	// 	(axios.get("/api/products").then(res => {
-	// 		setProducts(res.data.products);
-	// 	}))();
-	// }, [])
+	const [products, setProducts] = useState([]);
+	useEffect(async () => {
+		const response = await axios("/api/products");
+		setProducts(response.data.products)
+	}, [])
 
 	const updatedProducts = FilterFunction(products);
 
