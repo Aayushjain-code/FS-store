@@ -4,7 +4,6 @@ import axios from 'axios';
 import "./products.css";
 import { useFilter } from '../../context/context';
 import FilterContainer from './FilterContainer';
-// import { products } from "../../backend/db/products"
 import { FilterFunction } from './updatedProducts';
 
 const Products = () => {
