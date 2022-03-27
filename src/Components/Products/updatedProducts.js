@@ -7,12 +7,10 @@ export const FilterFunction = (products) => {
 
 	if (filterState.excludeNotAvailable) {
 		updatedProductList = updatedProductList.filter((item) => item.availableOrNot)
-		console.log(updatedProductList)
 	}
 
 	if (filterState.offerItems) {
 		updatedProductList = updatedProductList.filter((item) => item.offer)
-		console.log(updatedProductList)
 	}
 
 	if (filterState.byCategory) {
@@ -20,7 +18,6 @@ export const FilterFunction = (products) => {
 			updatedProductList = products
 		} else {
 			updatedProductList = updatedProductList.filter((item) => item.categoryName === filterState.byCategory)
-			console.log(updatedProductList)
 		}
 	}
 
@@ -40,14 +37,12 @@ export const FilterFunction = (products) => {
 		updatedProductList = filterState.sortByRange === 0
 			? updatedProductList
 			: [...updatedProductList].filter((product) => product.priceNew <= filterState.sortByRange);
-		console.log(updatedProductList)
 	}
 
 	if (filterState.isSort) {
 		updatedProductList = updatedProductList.sort((a, b) =>
 			filterState.isSort === 'lowToHigh' ? a.priceNew - b.priceNew : b.priceNew - a.priceNew
 		)
-		// console.log(updatedProductList)
 	}
 	if (filterState.byRating) {
 		if (filterState.byRating === '4StarAndAbove') {

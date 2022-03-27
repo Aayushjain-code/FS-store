@@ -54,7 +54,6 @@ const Signup = () => {
 
 
 
-			console.log("userDetails", userDetails);
 			setUserDetails({ firstName: '', lastName: '', email: '', password: '', confirmPassword: '', terms: true })
 		}
 
@@ -83,7 +82,7 @@ const Signup = () => {
 				</div>
 				{/* <div className="policy">
 					<input value={true} data-val="true" onChange={(e) => setUserDetails({ ...userDetails, terms: !value })} type="checkbox"></input>
-					{console.log(userDetails.terms)}
+					}
 					<h3>I accept all terms & condition</h3>
 				</div> */}
 

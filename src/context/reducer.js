@@ -5,7 +5,6 @@ export const filterReducer = (state, action) => {
 		case 'ONLY_ITEMS_WITH_OFFER':
 			return { ...state, offerItems: !state.offerItems }
 		case 'CATEGORY':
-			console.log(action.payload)
 			return { ...state, byCategory: action.payload }
 		case 'SORT_BY_PRICE':
 			return { ...state, isSort: action.payload }

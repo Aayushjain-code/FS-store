@@ -26,7 +26,6 @@ const Login = () => {
 
 	const loginHandler = (e) => {
 		e.preventDefault();
-		console.log('hello')
 		if (!userDetails.email || !userDetails.password) {
 			setError({ isError: true, text: 'Please enter all the fields' })
 		}

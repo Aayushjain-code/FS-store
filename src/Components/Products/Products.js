@@ -14,7 +14,6 @@ const Products = () => {
 	// useEffect(() => {
 	// 	(axios.get("/api/products").then(res => {
 	// 		setProducts(res.data.products);
-	// 		console.log("response:", res.data.products)
 	// 	}))();
 	// }, [])
 

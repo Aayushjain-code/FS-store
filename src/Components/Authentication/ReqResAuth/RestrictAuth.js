@@ -5,7 +5,6 @@ import { useAuth } from "../../../context/authContext";
 
 const RistrictAuth = () => {
 	const { authState: { userId } } = useAuth();
-	console.log(userId)
 	const location = useLocation();
 	return userId ? (
 		<Navigate to='/' state={{ from: location }} replace />
