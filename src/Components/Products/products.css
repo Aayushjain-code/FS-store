@@ -4,6 +4,9 @@
 	grid-template-columns: 1fr 3fr;
 }
 
+.product-container{
+	margin-top: 0;
+}
 
 .filter-container {
 	margin-top: 3rem;

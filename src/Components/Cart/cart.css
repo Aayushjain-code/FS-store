@@ -1,0 +1,171 @@
+.cart-container {
+	max-width: 90rem;
+	margin-top: 14rem;
+	margin-left: 20rem;
+}
+
+.heading-cart {
+	font-size: 3.5rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.cart {
+	display: flex;
+	/* align-items: center; */
+}
+
+.products {
+	flex: 0.75;
+}
+
+.product {
+	display: flex;
+	width: 100%;
+	max-width: 65rem;
+	height: 15rem;
+	overflow: hidden;
+	border: 0.2rem solid rgb(255, 255, 255);
+	background-color: var(--bg-color-1);
+	border-radius: 1rem;
+	margin-bottom: 1.2rem;
+}
+
+
+.product>img {
+	height: 100%;
+	width: 25rem;
+	border: none;
+	border-radius: 1rem;
+	object-fit: cover;
+	object-position: center;
+
+}
+
+
+.product-info {
+	padding: 2rem;
+	width: 100%;
+	position: relative;
+}
+
+.product-name,
+.product-price,
+.product-offer {
+	margin-bottom: 0.2rem;
+	font-weight: 600;
+}
+
+.product-remove {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	padding: 5px 10px;
+	background-color: var(--danger-color);
+	color: var(--bg-color-1);
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.product-remove:hover {
+	color: var(--bg-color-1);
+	color: var(--primary-color-dark);
+	/* font-weight: 600; */
+}
+
+.adjustment-container {
+	position: absolute;
+	bottom: 70px;
+	right: 10px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 0.5rem;
+}
+
+.adjustment-container button {
+	margin: 1rem;
+	padding: 1rem 2rem;
+	border-radius:0.8rem;
+	font-size: 20px;
+	font-weight: 600;
+	cursor: pointer;
+
+}
+.adjustment-container button:hover{
+
+padding: 1.1rem 2.2rem;
+}
+
+.product-remove .fa {
+	margin-right: 5px;
+}
+
+.cart-total {
+	flex: 0.25;
+	margin-left: 2rem;
+	padding: 1rem;
+	height: 22rem;
+	background-color: var(--bg-color-1);
+	border-radius: 1rem;
+}
+
+.cart-total p {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+	font-size: 20px;
+}
+
+.cart-total a {
+	display: block;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+	background-color: var(--primary);
+	color: white;
+	text-decoration: none;
+}
+
+.cart-total a:hover {
+	background-color: var(--primary-dark);
+}
+
+@media screen and (max-width: 700px) {
+	.remove {
+		display: none;
+	}
+
+	.product {
+		height: 150px;
+	}
+
+	.product>img {
+		height: 150px;
+		width: 200px;
+	}
+
+	.product-name,
+	.product-price,
+	.product-offer {
+		margin-bottom: 10px;
+	}
+
+}
+
+@media screen and (max-width: 900px) {
+	.cart {
+		flex-direction: column;
+	}
+
+	.cart-total {
+		margin-left: 0;
+		margin-bottom: 20px;
+	}
+
+}
+
+@media screen and (max-width: 1220px) {
+	.container {
+		max-width: 95%;
+	}
+}
