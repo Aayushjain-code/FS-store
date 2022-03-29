@@ -2,7 +2,11 @@ import React from 'react'
 import "./cart.css"
 import CartProduct from './CartProduct'
 import CartSummary from './CartSummary'
+import { useAuth } from '../../context/authContext'
 const Cart = () => {
+
+
+	const { authState: { cart } } = useAuth()
 	return (
 		<div>
 
@@ -10,8 +14,12 @@ const Cart = () => {
 				{/* <h1 class="heading-cart">Shopping Cart</h1> */}
 				<div class="cart">
 					<div class="products">
-						<CartProduct />
-						<CartProduct />
+						{/* <CartProduct /> */}
+						{cart.map((cartItem) => {
+							return (
+								<CartProduct cartItem={cartItem} />
+							)
+						})}
 					</div>
 					<CartSummary />
 
