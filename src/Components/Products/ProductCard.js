@@ -2,13 +2,14 @@ import { useState } from 'react'
 import { useAuth } from '../../context/authContext'
 import { useCart } from '../../context/cartContext'
 import { useNavigate } from "react-router-dom";
+import { useWishlist } from '../../context/wishListContext';
 
 
 const ProductCard = ({ item }) => {
 	const { authState: { loggedIn, cart, wishlist } } = useAuth()
 	const [isWish, setIsWish] = useState(false)
-	const { addToCart, addToWishlist } = useCart();
-
+	const { addToCart } = useCart();
+	const { addToWishlist } = useWishlist();
 
 	let navigate = useNavigate();
 	const redirectToLogin = () => {

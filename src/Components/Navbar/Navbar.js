@@ -1,12 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import "./Navbar.css"
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/authContext'
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
-	const { logout, authState: { userName, loggedIn }
+	const { logout, authState: { userName, loggedIn, cart }
 	} = useAuth()
+	const [cartQuantity, setCartQuantity] = useState(cart.length);
+
+	useEffect(() => {
+		setCartQuantity(cart.length)
+	}, [cart])
 
 
 	let navigate = useNavigate();
@@ -56,7 +61,7 @@ const Navbar = () => {
 
 					<div className="m1 badge-container">
 						<div className="fas fa-shopping-cart"></div>
-						<span className="badge right-badge sm-badge">10</span>
+						<span className="badge right-badge sm-badge"> {cartQuantity} </span>
 					</div>
 				</div>
 
