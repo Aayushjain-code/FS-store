@@ -40,6 +40,8 @@ const home = () => {
 						<FeaturedCard image={blog1} title={"Category1"} />
 						<FeaturedCard image={blog2} title={"Category2"} />
 						<FeaturedCard image={blog3} title={"Category3"} />
+						<FeaturedCard image={blog3} title={"Category3"} />
+						<FeaturedCard image={blog3} title={"Category3"} />
 					</div>
 				</div>
 
