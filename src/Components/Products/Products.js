@@ -20,7 +20,7 @@ const Products = () => {
 		< div >
 			<div className="main-container">
 				<FilterContainer />
-				<div>
+				<div className='product-container'>
 					<section className="cards" id="cards">
 						{/* {updatedProducts().length} */}
 						<div className="box-container">
@@ -34,6 +34,7 @@ const Products = () => {
 								})
 							}
 						</div>
+
 					</section>
 				</div>
 			</div>
