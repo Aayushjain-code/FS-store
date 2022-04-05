@@ -1,5 +1,6 @@
 .footer {
 	background: var(--bg-color-1) !important;
+
 }
 
 .footer .box-container .box {
@@ -29,12 +30,13 @@
 }
 
 .footer .credit {
-	font-size: 2rem;
-	text-align: center;
-	border-top: .1rem solid var(--text-color-2);
-	padding: 1rem;
-	padding-top: 2rem;
+	font-size: 1.5rem;
+	/* text-align: center; */
+	/* border-top: .1rem solid var(--text-color-2); */
+	/* padding: 1rem; */
+	/* padding-top: 2rem; */
 	margin-top: 2rem;
+	margin-left: 1.5rem;
 	color: var(--text-color-2);
 }
 
