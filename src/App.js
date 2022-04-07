@@ -24,7 +24,7 @@ function App() {
       {location.pathname === "/" ||
       location.pathname === "/products" ||
       location.pathname === "/cart" ||
-      location.pathname === "/trashed" ? (
+      location.pathname === "/wishlist" ? (
         <Navbar />
       ) : null}
       <Routes>
