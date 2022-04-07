@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import "./home.css";
 import axios from "axios";
-import blog1 from "../../assets/images/blog-1.jpg";
-import blog2 from "../../assets/images/blog-2.jpg";
-import blog3 from "../../assets/images/blog-3.jpg";
+
+import { useNavigate } from "react-router";
 
 import FeaturedCard from "./FeaturedCard";
 
 const home = () => {
+  const navigate = useNavigate();
   const [categories, setCategories] = useState([]);
   useEffect(async () => {
     const response = await axios("/api/categories");
@@ -23,7 +23,12 @@ const home = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. alias eos
             facilis, ipsa est asperiores repellendus!
           </p>
-          <button className="button btn-success">Read more</button>
+          <button
+            className="button btn-success"
+            onClick={() => navigate("/products")}
+          >
+            Shop Now
+          </button>
         </div>
       </section>
       <section className="category" id="category">
