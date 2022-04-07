@@ -121,6 +121,9 @@ export const authReducer = (state, action) => {
         },
         wishlist: action.payload.data,
       };
+
+    case "REMOVE_TOAST":
+      return { ...state, toastData: { ...state.toastData, display: false } };
     default:
       return state;
   }

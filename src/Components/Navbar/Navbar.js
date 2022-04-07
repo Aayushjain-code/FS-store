@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { Toast } from "../Toast/toast";
 
 const Navbar = () => {
   const {
@@ -24,7 +25,7 @@ const Navbar = () => {
   const [msg2, setMsg2] = useState(false);
 
   return (
-    <div>
+    <>
       <header className="header">
         <Link to="/" className="logo">
           {" "}
@@ -80,7 +81,8 @@ const Navbar = () => {
           </div>
         </div>
       </header>
-    </div>
+      <Toast />
+    </>
   );
 };
 
