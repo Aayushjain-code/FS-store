@@ -17,4 +17,4 @@ Fresh Store is an E-commerce App built using React, having functionality like pr
 
 ## Visit the website here
 
-## [Fresh Store(FS)](https://freshstore-ui.netlify.app/)
+## [Fresh Store(FS)](https://freshstore-store.netlify.app/)
