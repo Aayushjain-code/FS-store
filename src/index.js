@@ -6,9 +6,10 @@ import { makeServer } from "./server";
 
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "./context/context";
-import { AuthProvider } from "./context/authContext"
+import { AuthProvider } from "./context/authContext";
 import { CartProvider } from "./context/cartContext";
 import { WishlistProvider } from "./context/wishListContext";
+import { ThemeProvider } from "./context/themeContext";
 // Call make Server
 makeServer();
 
@@ -18,9 +19,11 @@ ReactDOM.render(
       <CartProvider>
         <WishlistProvider>
           <Provider>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>
+            <ThemeProvider>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </ThemeProvider>
           </Provider>
         </WishlistProvider>
       </CartProvider>

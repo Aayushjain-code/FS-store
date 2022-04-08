@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import { Toast } from "../Toast/toast";
+import { useThemeContext } from "../../context/themeContext";
 
 const Navbar = () => {
+  const { theme, toggleLightDarkTheme } = useThemeContext();
+
   const {
     logout,
     authState: { userName, loggedIn, cart },
@@ -33,10 +36,10 @@ const Navbar = () => {
         </Link>
 
         <nav className="navbar">
-          <Link to="/">home</Link>
-          <Link to="/products">products</Link>
-          <Link to="/wishlist">Wishlist</Link>
-          <Link to="/cart">Cart</Link>
+          <Link to="/">HOME</Link>
+          <Link to="/products">PRODUCTS</Link>
+          <Link to="/wishlist">WISHLIST</Link>
+          <Link to="/cart">CART</Link>
         </nav>
         <div className="icons">
           <span
@@ -49,7 +52,11 @@ const Navbar = () => {
             Hi, {userName}
           </span>
           <div className="fas fa-search" id="search-btn"></div>
-          <div className="fas fa-moon" id="theme-btn"></div>
+          <div
+            onClick={toggleLightDarkTheme}
+            className={`${theme === "light" ? "fas fa-moon" : "fas fa-sun"} `}
+            id="theme-btn"
+          ></div>
 
           {loggedIn ? (
             <>

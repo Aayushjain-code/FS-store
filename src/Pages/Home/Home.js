@@ -19,10 +19,8 @@ const home = () => {
       <section className="home" id="home">
         <div className="content">
           <h3>Fell the freshness</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. alias eos
-            facilis, ipsa est asperiores repellendus!
-          </p>
+          <p>Organic is fantastic. Our focus is on green and clean.</p>
+
           <button
             className="button btn-success"
             onClick={() => navigate("/products")}

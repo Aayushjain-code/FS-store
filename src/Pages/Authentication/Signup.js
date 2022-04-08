@@ -154,7 +154,6 @@ const Signup = () => {
 				</div> */}
 
         <button className="button" onClick={(e) => submitHandler(e)}>
-          {" "}
           Signup
         </button>
         <div className="text">
