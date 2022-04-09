@@ -18,8 +18,10 @@ const home = () => {
     <div>
       <section className="home" id="home">
         <div className="content">
-          <h3>Fell the freshness</h3>
-          <p>Organic is fantastic. Our focus is on green and clean.</p>
+          <h3 className="h3_plain">Fell the freshness</h3>
+          <p className="p_plain">
+            Organic is fantastic. Our focus is on green and clean.
+          </p>
 
           <button
             className="button btn-success"

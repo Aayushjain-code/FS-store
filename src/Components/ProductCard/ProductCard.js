@@ -29,18 +29,21 @@ const ProductCard = ({ item }) => {
         {item.availableOrNot ? "" : <h4 class="overlay-text">Out Of stock </h4>}
         <div className={item.availableOrNot ? "" : "overlay-container"}>
           <div class="badge-container image">
-            <h3>Available</h3>
             <img
               src={item.imageUrl}
               alt="Fiddle Leaf fig"
               class="card-img"
             ></img>
-            {item.offer && <h3> Sale </h3>}
-            {item.offerOFF !== "0" && <span>{item.offerOFF} OFF</span>}
+            {item.offer ? <h3>Sale</h3> : ""}
+
+            {item.offerOFF !== "0" && (
+              <button class="offer-tag outline">
+                <span>{item.offerOFF} OFF</span>
+              </button>
+            )}
           </div>
           <div class="p1 card-text-container content">
             <h5 class="card-header card-title">{item.title}</h5>
-            <div class="card-info">Stock available</div>
             <div class=" ">
               <div class="price">
                 Rs.{item.priceNew} <span>{item.priceOld}</span>{" "}

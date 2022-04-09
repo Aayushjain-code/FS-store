@@ -120,6 +120,6 @@
 	line-height: 1.7;
 }
 
-h3,p{
-	background-color:var(--bg-color-3) !important;
+.h3_plain,.p_plain{
+	background-color:var(--bg-color-3) !important ;
 }
