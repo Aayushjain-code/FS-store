@@ -85,15 +85,16 @@
 .adjustment-container button {
 	margin: 1rem;
 	padding: 1rem 2rem;
-	border-radius:0.8rem;
+	border-radius: 0.8rem;
 	font-size: 20px;
 	font-weight: 600;
 	cursor: pointer;
-
+	color: var(--primary);
 }
-.adjustment-container button:hover{
 
-padding: 1.1rem 2.2rem;
+.adjustment-container button:hover {
+
+	padding: 1.1rem 2.2rem;
 }
 
 .product-remove .fa {
