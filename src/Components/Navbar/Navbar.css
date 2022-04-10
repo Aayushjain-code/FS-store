@@ -35,6 +35,7 @@
 
 .header .search-form {
 	background: var(--bg-color-2);
+	color: var(--text-color-1);
 	border-radius: .5rem;
 	display: flex;
 	align-items: center;
@@ -92,12 +93,12 @@
 
 .header .navbar {
 	position: absolute;
-	top: 115%;
+	top: 110%;
 	right: 7%;
 	background: var(--bg-color-1);
 	border-radius: .5rem;
 	box-shadow: var(--box-shadow);
-	width: 12rem;
+	width: 15rem;
 	transform: scale(0);
 	transform-origin: top right;
 }
@@ -172,4 +173,13 @@
 
 .header .login-form .btn {
 	width: 100%;
+}
+
+
+
+.user-text{
+	font-weight:bold;
+	margin:1rem;
+	font-size: initial;
+	color:var(--text-color-1)
 }
