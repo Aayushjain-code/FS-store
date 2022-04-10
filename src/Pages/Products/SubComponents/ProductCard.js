@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { useAuth } from "../../context/authContext";
-import { useCart } from "../../context/cartContext";
+import { useState, useEffect } from "react";
+import { useAuth } from "../../../context/authContext";
+import { useCart } from "../../../context/cartContext";
 import { useNavigate } from "react-router-dom";
-import { useWishlist } from "../../context/wishListContext";
+import { useWishlist } from "../../../context/wishListContext";
 
 const ProductCard = ({ item }) => {
   const {
@@ -121,10 +121,6 @@ const ProductCard = ({ item }) => {
           </div>
         </div>
       </div>
-
-      {/* <h4 class="overlay-text">Sold Out!</h4>
-				<div class="overlay-container">
-					 */}
     </>
   );
 };

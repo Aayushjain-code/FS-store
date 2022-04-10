@@ -15,6 +15,7 @@ import Signup from "./Pages/Authentication/Signup";
 
 import RistrictAuth from "./Components/ReqResAuth/RestrictAuth";
 import RequireAuth from "./Components/ReqResAuth/RequireAuth";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
   const location = useLocation();
@@ -42,6 +43,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
+
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
 
       {location.pathname !== "/wishlist" ||

@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import ProductCard from "../../Components/ProductCard/ProductCard";
+import ProductCard from "./SubComponents/ProductCard";
 import axios from "axios";
 import "./products.css";
 import { useFilter } from "../../context/context";
-import FilterContainer from "./FilterContainer";
+import FilterContainer from "./SubComponents/FilterContainer";
 import { FilterFunction } from "./updatedProducts";
 
 const Products = () => {

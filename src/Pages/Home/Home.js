@@ -4,7 +4,7 @@ import axios from "axios";
 
 import { useNavigate } from "react-router";
 
-import FeaturedCard from "../../Components/FeaturedCard/FeaturedCard";
+import FeaturedCard from "./SubComponents/FeaturedCard";
 
 const home = () => {
   const navigate = useNavigate();
