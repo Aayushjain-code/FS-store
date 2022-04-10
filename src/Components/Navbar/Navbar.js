@@ -27,6 +27,11 @@ const Navbar = () => {
   const [msg1, setMsg1] = useState(false);
   const [msg2, setMsg2] = useState(false);
 
+  const [toggleMenu, setToggleMenu] = useState("");
+  const handleToggleMenu = () => {
+    toggleMenu === "" ? setToggleMenu("active") : setToggleMenu("");
+  };
+
   return (
     <>
       <header className="header">
@@ -34,13 +39,32 @@ const Navbar = () => {
           {" "}
           <i className="fab fa-canadian-maple-leaf"></i> FreshStore{" "}
         </Link>
+        <form action="" class="search-form">
+          <input
+            type="search"
+            name=""
+            placeholder="Search"
+            id="searchBox"
+          ></input>
+          <label for="searchBox" class="fas fa-search"></label>
+        </form>
 
-        <nav className="navbar">
+        <nav className={`navbar ${toggleMenu}`}>
           <Link to="/">HOME</Link>
           <Link to="/products">PRODUCTS</Link>
           <Link to="/wishlist">WISHLIST</Link>
           <Link to="/cart">CART</Link>
+          {loggedIn ? (
+            <a>
+              <div onClick={() => logout()}>Logout</div>
+            </a>
+          ) : (
+            <a>
+              <div onClick={handleClick}>Login</div>
+            </a>
+          )}
         </nav>
+
         <div className="icons">
           <span
             style={{
@@ -58,7 +82,7 @@ const Navbar = () => {
             id="theme-btn"
           ></div>
 
-          {loggedIn ? (
+          {/* {loggedIn ? (
             <>
               <div
                 className="fas fa-sign-out-alt"
@@ -80,12 +104,17 @@ const Navbar = () => {
               ></div>
               {msg1 ? <span className="msgStyle1">Login</span> : ""}
             </>
-          )}
+          )} */}
 
           <div className="m1 badge-container">
             <div className="fas fa-shopping-cart"></div>
             <span className="badge right-badge sm-badge"> {cartQuantity} </span>
           </div>
+          <div
+            class="fas fa-bars"
+            id="menu-btn"
+            onClick={handleToggleMenu}
+          ></div>
         </div>
       </header>
       <Toast />

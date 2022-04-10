@@ -85,10 +85,23 @@
 	display: none;
 }
 
-.header .navbar {
+/* .header .navbar {
  display: flex;
 
+} */
+
+.header .navbar {
+	position: absolute;
+	top: 115%;
+	right: 7%;
+	background: var(--bg-color-1);
+	border-radius: .5rem;
+	box-shadow: var(--box-shadow);
+	width: 12rem;
+	transform: scale(0);
+	transform-origin: top right;
 }
+
 
 .header .navbar.active {
 	transform: scale(1);
