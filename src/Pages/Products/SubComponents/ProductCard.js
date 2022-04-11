@@ -46,7 +46,7 @@ const ProductCard = ({ item }) => {
             <h5 class="card-header card-title">{item.title}</h5>
             <div class=" ">
               <div class="price">
-                Rs.{item.priceNew} <span>{item.priceOld}</span>{" "}
+                Rs.{item.priceNew} <span>{item.priceOld}</span>
               </div>
               <p style={{ color: "red" }}>{item.categoryName}</p>
             </div>
