@@ -5,7 +5,6 @@ import { v4 as uuid } from "uuid";
  * You can add products of your wish with different attributes
  * */
 
-
 export const products = [
   {
     _id: uuid(),
@@ -14,11 +13,118 @@ export const products = [
     priceOld: 150,
     priceNew: 75,
     offerOFF: "50%",
-    categoryName: "tuberous",
+    categoryName: "Vegitables",
     offer: true,
-    imageUrl: 'https://cdn.pixabay.com/photo/2017/05/13/15/23/carrot-2309814__340.jpg'
-    , rating: 5
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2017/05/13/15/23/carrot-2309814__340.jpg",
+    rating: 5,
   },
+  {
+    _id: uuid(),
+    title: "Strawberry",
+    availableOrNot: true,
+    priceOld: 140,
+    priceNew: 75,
+    offerOFF: "50%",
+    categoryName: "Fruits",
+    offer: true,
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2018/04/29/11/54/strawberries-3359755__340.jpg",
+    rating: 3.8,
+  },
+  {
+    _id: uuid(),
+    title: "Chana",
+    availableOrNot: true,
+    priceOld: 100,
+    priceNew: 40,
+    offerOFF: "50%",
+    categoryName: "Sprouts",
+    offer: false,
+    imageUrl:
+      "https://media.istockphoto.com/photos/grainsprouted-gram-or-chana-picture-id1052140294?k=20&m=1052140294&s=612x612&w=0&h=g3k1vExoylmvLm61CpN8I5F5isDQRv6b8ybUCuwgG8g=",
+    rating: 4.1,
+  },
+  {
+    _id: uuid(),
+    title: "Mooung",
+    availableOrNot: true,
+    priceOld: 100,
+    priceNew: 40,
+    offerOFF: "50%",
+    categoryName: "Sprouts",
+    offer: false,
+    imageUrl:
+      "https://media.istockphoto.com/photos/sprouted-mung-beans-in-bowl-vegan-and-healthy-food-picture-id1208723263?k=20&m=1208723263&s=612x612&w=0&h=drxctIDcoMUy3-kCoL5pYC2_w4ikBfyKRSX5xgHRWaY=",
+    rating: 4.1,
+  },
+  {
+    _id: uuid(),
+    title: "Soybean",
+    availableOrNot: true,
+    priceOld: 118,
+    priceNew: 49,
+    offerOFF: "60%",
+    categoryName: "Sprouts",
+    offer: false,
+    imageUrl:
+      "https://theselfsufficientliving.com/wp-content/uploads/2015/03/Soybean-Sprouts.jpg ",
+    rating: 4.1,
+  },
+  {
+    _id: uuid(),
+    title: "Black Beans",
+    availableOrNot: true,
+    priceOld: 38,
+    priceNew: 29,
+    offerOFF: "10%",
+    categoryName: "Sprouts",
+    offer: false,
+    imageUrl:
+      "https://www.liveeatlearn.com/wp-content/uploads/2020/06/how-to-spout-legumes-48-768x320.jpg.webp ",
+    rating: 3.1,
+  },
+  {
+    _id: uuid(),
+    title: "Banana",
+    availableOrNot: true,
+    priceOld: 50,
+    priceNew: 35,
+    offerOFF: "50%",
+    categoryName: "Fruits",
+    offer: true,
+    imageUrl:
+      "https://media.istockphoto.com/photos/banana-wallpaper-picture-id172876004?k=20&m=172876004&s=612x612&w=0&h=rzeb9xh2knDf2UYe1obYnaXryrJVFnqji2-DwixLa4Q=",
+    rating: 4.8,
+  },
+  {
+    _id: uuid(),
+    title: "Lychee",
+    availableOrNot: true,
+    priceOld: 80,
+    priceNew: 45,
+    offerOFF: "58%",
+    categoryName: "Fruits",
+    offer: false,
+    imageUrl:
+      "https://media.istockphoto.com/photos/fresh-lychee-picture-id512283094?k=20&m=512283094&s=612x612&w=0&h=Y5_LTT8_9rmmtu0ZVAfgOzZ8rivJzWE5yAoCdljdJCA=",
+    rating: 4.2,
+  },
+
+  {
+    _id: uuid(),
+    title: "Blueberry",
+    availableOrNot: true,
+    priceOld: 90,
+    priceNew: 55,
+    offerOFF: "38%",
+    categoryName: "Fruits",
+    offer: true,
+    imageUrl:
+      " https://media.istockphoto.com/photos/blueberry-antioxidant-organic-superfood-picture-id529677122?k=20&m=529677122&s=612x612&w=0&h=OXQLpwmmTSncDDXv8mSNyVwUU5yMPkrmaNcCWmXuE1I=",
+    rating: 4.5,
+  },
+
   {
     _id: uuid(),
     title: "Orange",
@@ -26,10 +132,11 @@ export const products = [
     priceOld: 200,
     priceNew: 200,
     offerOFF: "0",
-    categoryName: "fruit",
+    categoryName: "Fruits",
     offer: false,
-    imageUrl: 'https://www.collinsdictionary.com/images/full/orange_342874121.jpg'
-    , rating: 5
+    imageUrl:
+      "https://www.collinsdictionary.com/images/full/orange_342874121.jpg",
+    rating: 5,
   },
   {
     _id: uuid(),
@@ -38,10 +145,11 @@ export const products = [
     priceOld: 80,
     priceNew: 80,
     offerOFF: "0",
-    categoryName: "tuberous",
+    categoryName: "Vegitables",
     offer: false,
-    imageUrl: 'https://cdn.pixabay.com/photo/2016/03/05/19/15/bulb-1238338_960_720.jpg'
-    , rating: 4
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/03/05/19/15/bulb-1238338_960_720.jpg",
+    rating: 4,
   },
   {
     _id: uuid(),
@@ -50,10 +158,11 @@ export const products = [
     priceOld: 200,
     priceNew: 100,
     offerOFF: "50%",
-    categoryName: "tuberous",
+    categoryName: "Vegitables",
     offer: true,
-    imageUrl: "https://cdn.pixabay.com/photo/2016/08/11/08/43/potatoes-1585060__340.jpg"
-    , rating: 4
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/08/11/08/43/potatoes-1585060__340.jpg",
+    rating: 4,
   },
   {
     _id: uuid(),
@@ -62,10 +171,11 @@ export const products = [
     priceOld: 250,
     priceNew: 250,
     offerOFF: "0",
-    categoryName: "Green",
+    categoryName: "Fruits",
     offer: false,
-    imageUrl: 'https://cdn.pixabay.com/photo/2015/09/09/20/17/avocado-933060__340.jpg'
-    , rating: 3
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2015/09/09/20/17/avocado-933060__340.jpg",
+    rating: 3,
   },
   {
     _id: uuid(),
@@ -74,10 +184,11 @@ export const products = [
     priceOld: 100,
     priceNew: 100,
     offerOFF: "0",
-    categoryName: "Green",
+    categoryName: "Vegitables",
     offer: false,
-    imageUrl: 'https://cdn.pixabay.com/photo/2016/09/10/17/47/eggplant-1659784__340.jpg'
-    , rating: 3
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/09/10/17/47/eggplant-1659784__340.jpg",
+    rating: 3,
   },
   {
     _id: uuid(),
@@ -86,10 +197,11 @@ export const products = [
     priceOld: 120,
     priceNew: 60,
     offerOFF: "50%",
-    categoryName: "tuberous",
+    categoryName: "Vegitables",
     offer: true,
-    imageUrl: 'https://cdn.pixabay.com/photo/2018/06/22/13/52/beetroot-3490809__340.jpg'
-    , rating: 2
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2018/06/22/13/52/beetroot-3490809__340.jpg",
+    rating: 2,
   },
   {
     _id: uuid(),
@@ -98,10 +210,11 @@ export const products = [
     priceOld: 60,
     priceNew: 60,
     offerOFF: "0",
-    categoryName: "leafy",
+    categoryName: "Vegitables",
     offer: false,
-    imageUrl: 'https://cdn.pixabay.com/photo/2018/10/03/21/57/cabbage-3722498_960_720.jpg'
-    , rating: 2
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2018/10/03/21/57/cabbage-3722498_960_720.jpg",
+    rating: 2,
   },
   {
     _id: uuid(),
@@ -110,10 +223,11 @@ export const products = [
     priceOld: 90,
     priceNew: 65,
     offerOFF: "30%",
-    categoryName: "Green",
+    categoryName: "Vegitables",
     offer: true,
-    imageUrl: 'https://cdn.pixabay.com/photo/2015/07/17/13/44/cucumbers-849269__340.jpg'
-    , rating: 1
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2015/07/17/13/44/cucumbers-849269__340.jpg",
+    rating: 1,
   },
   {
     _id: uuid(),
@@ -122,9 +236,10 @@ export const products = [
     priceOld: 70,
     priceNew: 70,
     offerOFF: "0",
-    categoryName: "Green",
+    categoryName: "Vegitables",
     offer: false,
-    imageUrl: 'https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250_960_720.jpg'
-    , rating: 1
+    imageUrl:
+      "https://cdn.pixabay.com/photo/2016/03/05/19/02/broccoli-1238250_960_720.jpg",
+    rating: 1,
   },
 ];

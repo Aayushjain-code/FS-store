@@ -85,15 +85,16 @@
 .adjustment-container button {
 	margin: 1rem;
 	padding: 1rem 2rem;
-	border-radius:0.8rem;
+	border-radius: 0.8rem;
 	font-size: 20px;
 	font-weight: 600;
 	cursor: pointer;
-
+	color: var(--primary);
 }
-.adjustment-container button:hover{
 
-padding: 1.1rem 2.2rem;
+.adjustment-container button:hover {
+
+	padding: 1.1rem 2.2rem;
 }
 
 .product-remove .fa {
@@ -103,9 +104,10 @@ padding: 1.1rem 2.2rem;
 .cart-total {
 	flex: 0.25;
 	margin-left: 2rem;
-	padding: 1rem;
-	height: 22rem;
-	background-color: var(--bg-color-1);
+	margin-top: 8rem;
+	padding: 3rem 2rem;
+	height: 18rem;
+	background-color: var(--bg-color-3);
 	border-radius: 1rem;
 }
 

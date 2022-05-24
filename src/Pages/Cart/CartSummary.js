@@ -31,12 +31,17 @@ const CartSummary = () => {
   return (
     <div class="cart-total">
       <p>
-        <span>Total Price</span>
-        <span> ₹{totalPrice}</span>
+        <span>Total Price :</span>
+        <span>
+          <b> ₹{totalPrice} </b>
+        </span>
       </p>
       <p>
-        <span>Subtotal</span>
-        <span> ({totalItem}) items</span>
+        <span>Subtotal :</span>
+        <span>
+          {" "}
+          <b>({totalItem}) items</b>
+        </span>
       </p>
 
       <Link to="/home">Proceed to Checkout</Link>

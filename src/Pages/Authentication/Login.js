@@ -72,7 +72,7 @@ const Login = () => {
           <div className="button" onClick={() => testLogin()}>
             Test Login
           </div>
-          <div className="m1 btn btn-link">
+          <div className="text">
             <h3>
               Not having an account? <Link to="/signup"> Signup now </Link>{" "}
             </h3>

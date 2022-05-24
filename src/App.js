@@ -5,16 +5,17 @@ import Mockman from "mockman-js";
 
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import Home from "./Components/Home/Home";
-import Cart from "./Components/Cart/Cart";
-import Wishlist from "./Components/Wishlist/Wishlist";
-import Products from "./Components/Products/Products";
+import Home from "./Pages/Home/Home";
+import Cart from "./Pages/Cart/Cart";
+import Wishlist from "./Pages/Wishlist/Wishlist";
+import Products from "./Pages/Products/Products";
 
-import Login from "./Components/Authentication/Login";
-import Signup from "./Components/Authentication/Signup";
+import Login from "./Pages/Authentication/Login";
+import Signup from "./Pages/Authentication/Signup";
 
-import RistrictAuth from "./Components/Authentication/ReqResAuth/RestrictAuth";
-import RequireAuth from "./Components/Authentication/ReqResAuth/RequireAuth";
+import RistrictAuth from "./Components/ReqResAuth/RestrictAuth";
+import RequireAuth from "./Components/ReqResAuth/RequireAuth";
+import ErrorPage from "./Pages/ErrorPage/ErrorPage";
 
 function App() {
   const location = useLocation();
@@ -42,11 +43,16 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
         </Route>
+
+        <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
 
       {location.pathname !== "/wishlist" ||
-        (location.pathname !== "/cart" && <Footer />)}
-      {/* <Footer /> */}
+      location.pathname !== "/cart" ||
+      location.pathname !== "/login" ||
+      location.pathname !== "/signup" ? null : (
+        <Footer />
+      )}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { useFilter } from "../../context/context";
+import { useFilter } from "../../../context/context";
 
 const FilterContainer = () => {
   const { filterDispatch, filterState } = useFilter();
@@ -83,10 +83,9 @@ const FilterContainer = () => {
           }
         >
           <option value="All">All</option>
-          <option value="tuberous">tuberous</option>
-          <option value="fruit">fruit</option>
-          <option value="Green">Green</option>
-          <option value="leafy">leafy</option>
+          <option value="Vegitables">Vegitables</option>
+          <option value="Fruits">Fruits</option>
+          <option value="Sprouts">Sprouts</option>
         </select>
       </span>
 

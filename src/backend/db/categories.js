@@ -8,26 +8,26 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "tuberous",
+    categoryName: "Vegitables",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2017/05/13/15/23/carrot-2309814__340.jpg",
+      "https://media.istockphoto.com/photos/indian-marketplace-showing-different-kinds-of-vegetables-picture-id183255683?k=20&m=183255683&s=612x612&w=0&h=c83XK4ylZ-a-_WuxZ0EarGRVSut5P21I_oD-JY7oHWM=",
     description:
       "literature in the form of prose, especially novels, that describes imaginary events and people",
   },
   {
     _id: uuid(),
-    categoryName: "Green",
+    categoryName: "Fruits",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2016/03/05/19/15/bulb-1238338_960_720.jpg",
+      "https://images.pexels.com/photos/1300975/pexels-photo-1300975.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+      "literature in the form of prose, especially novels, that describes imaginary events and people",
   },
   {
     _id: uuid(),
-    categoryName: "leafy",
+    categoryName: "Sprouts",
     imageUrl:
-      "https://cdn.pixabay.com/photo/2016/08/11/08/43/potatoes-1585060__340.jpg",
+      "https://media.istockphoto.com/photos/sprouted-lentil-salad-picture-id1127740593?k=20&m=1127740593&s=612x612&w=0&h=hOp4ugKPf-3Qyklddj5ba1iNRr4lZ2hoqOcMCUESFEg=",
     description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
   },
 ];

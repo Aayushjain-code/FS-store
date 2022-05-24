@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router";
-import { useFilter } from "../../context/context";
+import { useFilter } from "../../../context/context";
 
 const FeaturedCard = ({ item }) => {
   const navigate = useNavigate();
