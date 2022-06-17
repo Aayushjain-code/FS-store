@@ -3,7 +3,12 @@
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 }
-
+.card{
+	min-width: 30rem;
+}
+.box-container{
+	margin: 4rem;
+}
 .product-container{
 	margin-top: 0;
 }
@@ -74,7 +79,3 @@
 	right: 1rem;
 }
 
-
-.button{
-	width: 40%;
-}

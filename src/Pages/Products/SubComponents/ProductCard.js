@@ -49,6 +49,7 @@ const ProductCard = ({ item }) => {
                 Rs.{item.priceNew} <span>{item.priceOld}</span>
               </div>
               <p style={{ color: "red" }}>{item.categoryName}</p>
+              <p>Ratings: {item.rating} ⭐</p>
             </div>
             <div class="btn-container">
               {loggedIn ? (
