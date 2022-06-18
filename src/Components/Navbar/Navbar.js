@@ -75,7 +75,14 @@ const Navbar = () => {
           ></div>
           <div className="m1 badge-container" onClick={() => navigate("/cart")}>
             <div className="fas fa-shopping-cart"></div>
-            <span className="badge right-badge sm-badge"> {cartQuantity} </span>
+            {cartQuantity ? (
+              <span className="badge right-badge sm-badge">
+                {" "}
+                {cartQuantity}{" "}
+              </span>
+            ) : (
+              ""
+            )}
           </div>
           <div
             class="fas fa-bars"

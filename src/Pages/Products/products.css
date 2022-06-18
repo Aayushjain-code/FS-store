@@ -5,6 +5,7 @@
 }
 .card{
 	min-width: 30rem;
+	border: 0.025rem solid rgb(210, 210, 210);
 }
 .box-container{
 	margin: 4rem;
@@ -84,5 +85,12 @@
 	position: absolute;
 	top:25.5rem;
 	right: 1rem;
+}
+
+.sale-tag{
+    padding: 0.05rem 1.2rem !important;
+	color:var(--bg-color-1);
+	font-weight: 500 !important;
+	background-color:var(--primary) !important;
 }
 

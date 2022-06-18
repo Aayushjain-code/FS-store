@@ -34,7 +34,7 @@ const ProductCard = ({ item }) => {
               alt="Fiddle Leaf fig"
               class="card-img"
             ></img>
-            {item.offer ? <h3>Sale</h3> : ""}
+            {item.offer ? <h3 className="sale-tag">Sale</h3> : ""}
 
             {item.offerOFF !== "0" && (
               <button class="offer-tag outline">
