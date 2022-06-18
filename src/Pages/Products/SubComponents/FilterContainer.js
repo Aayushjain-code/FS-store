@@ -105,7 +105,7 @@ const FilterContainer = () => {
           }
         />{" "}
         <label style={{ fontSize: "1.2rem" }}>
-          ₹ 0 to ₹ {filterState.sortByRange ? filterState.sortByRange : 200}{" "}
+          ₹0 to ₹{filterState.sortByRange ? filterState.sortByRange : 200}{" "}
         </label>
       </span>
 
