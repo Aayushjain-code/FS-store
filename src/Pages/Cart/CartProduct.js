@@ -22,15 +22,6 @@ const CartProduct = ({ cartItem }) => {
         </p>
         <span className="adjustment-container">
           <button
-            className="btn-success"
-            onClick={() =>
-              updateCartQuantity(cartItem._id, "increment", "Cart updated")
-            }
-          >
-            +
-          </button>
-          <p class="product-quantity">{cartItem.qty}</p>
-          <button
             className="btn-error"
             onClick={() =>
               cartItem.qty <= 1
@@ -39,6 +30,16 @@ const CartProduct = ({ cartItem }) => {
             }
           >
             -
+          </button>
+          <p class="product-quantity">{cartItem.qty}</p>
+
+          <button
+            className="btn-success"
+            onClick={() =>
+              updateCartQuantity(cartItem._id, "increment", "Cart updated")
+            }
+          >
+            +
           </button>
         </span>
       </div>

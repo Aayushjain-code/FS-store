@@ -18,9 +18,9 @@ const FilterContainer = () => {
           }
         >
           <option value="All">All</option>
-          <option value="Above 50 Below 100">Above 50 Below 100</option>
-          <option value="Above 100 Below 200">Above 100 Below 200</option>
-          <option value="Above 200 Below 300">Above 200 Below 300</option>
+          <option value="Above 50 Below 100">Above ₹50 Below ₹100</option>
+          <option value="Above 100 Below 200">Above ₹100 Below ₹200</option>
+          <option value="Above 200 Below 300">Above ₹200 Below ₹300</option>
         </select>
       </span>
 
@@ -93,17 +93,20 @@ const FilterContainer = () => {
         <label style={{ fontSize: "1.8rem" }}>Range Slider: </label>
         <input
           type="range"
-          min={60}
+          min={0}
           max={300}
-          step={30}
-          defaultValue={250}
+          step={25}
+          defaultValue={200}
           onChange={(event) =>
             filterDispatch({
               type: "FILTER_BY_RANGE",
               payload: event.target.value,
             })
           }
-        />
+        />{" "}
+        <label style={{ fontSize: "1.2rem" }}>
+          ₹0 to ₹{filterState.sortByRange ? filterState.sortByRange : 200}{" "}
+        </label>
       </span>
 
       <span className="filter-sub-heading">

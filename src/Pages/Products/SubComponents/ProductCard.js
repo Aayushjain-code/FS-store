@@ -34,7 +34,7 @@ const ProductCard = ({ item }) => {
               alt="Fiddle Leaf fig"
               class="card-img"
             ></img>
-            {item.offer ? <h3>Sale</h3> : ""}
+            {item.offer ? <h3 className="sale-tag">Sale</h3> : ""}
 
             {item.offerOFF !== "0" && (
               <button class="offer-tag outline">
@@ -43,7 +43,10 @@ const ProductCard = ({ item }) => {
             )}
           </div>
           <div class="p1 card-text-container content">
-            <h5 class="card-header card-title">{item.title}</h5>
+            <h5 class="card-header card-title">
+              {item.title} <span className="rating-style">{item.rating}⭐</span>
+            </h5>
+
             <div class=" ">
               <div class="price">
                 Rs.{item.priceNew} <span>{item.priceOld}</span>

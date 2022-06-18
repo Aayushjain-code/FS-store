@@ -3,9 +3,22 @@
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 }
-
+.card{
+	min-width: 30rem;
+	border: 0.025rem solid rgb(210, 210, 210);
+}
+.box-container{
+	margin: 4rem;
+}
 .product-container{
 	margin-top: 0;
+}
+.rating-style{
+	font-size: 1.8rem;
+	background-color:var(--bg-color-2);
+	padding: 0.3rem;
+	border-radius:0.5rem;
+
 }
 
 .filter-container {
@@ -74,7 +87,10 @@
 	right: 1rem;
 }
 
-
-.button{
-	width: 40%;
+.sale-tag{
+    padding: 0.05rem 1.2rem !important;
+	color:var(--bg-color-1);
+	font-weight: 500 !important;
+	background-color:var(--primary) !important;
 }
+

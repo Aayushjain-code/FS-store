@@ -10,7 +10,9 @@ const Cart = () => {
   return (
     <div>
       <div class="cart-container">
-        {/* <h1 class="heading-cart">Shopping Cart</h1> */}
+        <h1 class="heading-cart">
+          Shopping Cart: {cart.length} Items in Basket!
+        </h1>
         <div class="cart">
           <div class="products">
             {/* <CartProduct /> */}

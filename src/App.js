@@ -47,12 +47,13 @@ function App() {
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>
 
-      {location.pathname !== "/wishlist" ||
-      location.pathname !== "/cart" ||
-      location.pathname !== "/login" ||
-      location.pathname !== "/signup" ? null : (
+      {/* {location.pathname === "/" ||
+      location.pathname === "/products" ||
+      location.pathname === "/cart" ||
+      location.pathname === "/wishlist" ? (
         <Footer />
-      )}
+      ) : null}
+      )} */}
     </div>
   );
 }

@@ -39,7 +39,7 @@ const Navbar = () => {
           {" "}
           <i className="fab fa-canadian-maple-leaf"></i> FreshStore
         </Link>
-        <form action="" class="search-form">
+        {/* <form action="" class="search-form">
           <input
             type="search"
             name=""
@@ -47,7 +47,7 @@ const Navbar = () => {
             id="searchBox"
           ></input>
           <label for="searchBox" class="fas fa-search"></label>
-        </form>
+        </form> */}
 
         <nav className={`navbar ${toggleMenu}`}>
           <Link to="/">HOME</Link>
@@ -75,7 +75,14 @@ const Navbar = () => {
           ></div>
           <div className="m1 badge-container" onClick={() => navigate("/cart")}>
             <div className="fas fa-shopping-cart"></div>
-            <span className="badge right-badge sm-badge"> {cartQuantity} </span>
+            {cartQuantity ? (
+              <span className="badge right-badge sm-badge">
+                {" "}
+                {cartQuantity}{" "}
+              </span>
+            ) : (
+              ""
+            )}
           </div>
           <div
             class="fas fa-bars"
