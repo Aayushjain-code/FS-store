@@ -93,7 +93,7 @@ const FilterContainer = () => {
         <label style={{ fontSize: "1.8rem" }}>Range Slider: </label>
         <input
           type="range"
-          min={60}
+          min={10}
           max={300}
           step={30}
           defaultValue={250}
@@ -104,6 +104,7 @@ const FilterContainer = () => {
             })
           }
         />
+        {/* <label style={{ fontSize: "1.8rem" }}>${event.target.value} </label> */}
       </span>
 
       <span className="filter-sub-heading">

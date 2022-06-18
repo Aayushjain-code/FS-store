@@ -43,13 +43,15 @@ const ProductCard = ({ item }) => {
             )}
           </div>
           <div class="p1 card-text-container content">
-            <h5 class="card-header card-title">{item.title}</h5>
+            <h5 class="card-header card-title">
+              {item.title} <span className="rating-style">{item.rating}⭐</span>
+            </h5>
+
             <div class=" ">
               <div class="price">
                 Rs.{item.priceNew} <span>{item.priceOld}</span>
               </div>
               <p style={{ color: "red" }}>{item.categoryName}</p>
-              <p>Ratings: {item.rating} ⭐</p>
             </div>
             <div class="btn-container">
               {loggedIn ? (

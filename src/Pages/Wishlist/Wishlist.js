@@ -11,6 +11,7 @@ const Wishlist = () => {
   return (
     <div>
       <section class="cards" id="cards">
+        <h1>Wishlist: {wishlist.length} Items Added!</h1>
         <div class="box-container">
           {wishlist.map((wishListItem) => {
             return (
